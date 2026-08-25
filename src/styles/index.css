@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: light;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Waybill stub — the signature element used on order numbers */
+.waybill {
+  position: relative;
+  background: #14171A;
+  color: #F6F4EF;
+  border-radius: 4px;
+}
+.waybill::before,
+.waybill::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: #F6F4EF;
+  border-radius: 50%;
+}
+.waybill::before { left: -9px; }
+.waybill::after { right: -9px; }
+
+.waybill-perf {
+  border-left: 2px dashed rgba(246, 244, 239, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid #FFB020;
+  outline-offset: 2px;
+}
